@@ -1,0 +1,25 @@
+public class ChangeMaker {
+	public static int getQuarters(int cents) {
+		int quarters = cents / 25;
+		return quarters;
+	}
+
+	public static int getDimes(int cents) {
+		int dimes = cents / 10;
+		return dimes;
+	}
+
+	public static int getNickels(int cents) {
+		int nickels = cents / 5;
+		return nickels;
+	}
+
+	public static int getPennies(int cents) {
+		int pennies = cents / 1;
+		return pennies;
+	}
+
+	public static void main(String[] args){
+	System.out.println("I work");
+	}
+}
