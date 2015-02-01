@@ -19,7 +19,42 @@ public class ChangeMaker {
 		return pennies;
 	}
 
+	public static int [] getChange(int cents) {
+		int [] result = new int [4];
+		result [0] = getQuarters(cents);
+		cents = cents % 25;
+		result [1] = getDimes(cents);
+		cents = cents % 10;
+		result [2] = getNickels(cents);
+		cents = cents % 5;
+		result [3] = getPennies(cents);
+		cents = cents % 1;
+		return result;
+	}
+
+
 	public static void main(String[] args){
-	System.out.println("I work");
+			
+			if (args.length == 0){
+				System.out.println("Usage: java ChangeMaker <amount in cents>");
+			} else {
+
+			try {
+			int cents = Integer.parseInt(args[0]);
+			int [] total = getChange(cents);
+
+			if (Integer.parseInt(args[0]) < 0){
+				System.out.println("Cannot make change for negative cents");
+			} else {
+				System.out.println(total[0]);
+				System.out.println(total[1]);
+				System.out.println(total[2]);
+				System.out.println(total[3]);
+			}
+				}
+		catch(NumberFormatException e) {
+			System.out.println("Supplied value is not an integer.");
+			}
+		}
 	}
 }
