@@ -43,7 +43,7 @@ public class ChangeMaker {
 			int cents = Integer.parseInt(args[0]);
 			int [] total = getChange(cents);
 
-			if (Integer.parseInt(args[0]) < 0){
+			if (cents < 0){
 				System.out.println("Cannot make change for negative cents");
 			} else {
 				System.out.println(total[0]);
