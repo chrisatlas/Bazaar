@@ -1,6 +1,7 @@
 public class DateCounter {
 	public static boolean isLeapYear(int year) {
-
+		boolean answer = (year % 4 == 0 || year % 100 == 0 && year % 400 == 0);
+			return answer;
 	}
 
 	public static int daysInMonths(int year, int month) {
