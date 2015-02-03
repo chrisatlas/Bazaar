@@ -31,8 +31,7 @@ public class ChangeMaker {
 		cents = cents % 1;
 		return result;
 	}
-
-
+	
 	public static void main(String[] args){
 			
 			if (args.length == 0){
