@@ -1,0 +1,28 @@
+public class DateCounter {
+	public static boolean isLeapYear(int year) {
+
+	}
+
+	public static int daysInMonths(int year, int month) {
+
+	}
+
+	public static boolean isValidDate(int year, int month, int day) {
+
+	}
+
+	public static int daysBetween(int year0, int month0, int day0, int year1, int month1, int day1) {
+
+	}
+
+	public static boolean hasLeapSecond(int year) {
+
+	}
+
+	public static boolean hasLeapSecond(int year, int month, int day) {	
+
+	}
+}
+
+public static void main(String [] args) {
+}
