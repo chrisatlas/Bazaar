@@ -65,11 +65,24 @@ public class DateCounter {
 		return false;
 	}
 	public static void main(String[] args) {
-		int year0;
-		int year1;
-		int month0;
-		int month1;
-		int day0;
-		int day1;
-}
+			try {
+			if (args.length == 0){
+				System.out.println("Usage: java DateCounter <year0> <month0> <day0> <year1> <month1> <day1>");
+				return;
+			}
+				int year0 = Integer.parseInt(args[0]);
+				int year1 = Integer.parseInt(args[1]);
+				int month0 = Integer.parseInt(args[2]);
+				int month1 = Integer.parseInt(args[3]);
+				int day0 = Integer.parseInt(args[4]);
+				int day1 = Integer.parseInt(args[5]);
+
+
+				System.out.println(daysBetween(year0, month0, day0, year1, month1, day1));
+		}
+		catch (NumberFormatException nfe) {
+			System.out.println("One or more of hte supplied dates is not valid");
+
+		}
+	}
 }
